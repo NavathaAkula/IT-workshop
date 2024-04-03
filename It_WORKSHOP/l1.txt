@@ -1,0 +1,78 @@
+//q1 cp 
+//syntax cp source_file destination_dir
+
+cp calci.java navatha.java
+
+//q2 trying to copy destination
+//syntax:cp -r sourcedir destinationdir
+
+
+//q3 rm
+//synatx  6
+for directories :rm -r directory
+for multipe files: rm file1.txt file2.txt directory1 directory2
+
+
+
+//q4 
+user@navatha-a:~$ nslookup google.com
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Non-authoritative answer:
+Name:	google.com
+Address: 142.250.196.14
+Name:	google.com
+Address: 2404:6800:4007:821::200e
+
+
+//q5 user@navatha-a:~$ mv pracm.java web
+
+//q6 chmod 750 example.txt
+
+chmod u+rwx example.txt
+
+//q7 user@navatha-a:~$ touch m1
+
+//q8 
+user@navatha-a:~$ cat m1 Rgukt
+user@navatha-a:~$ cat m1 Rgukt > j.txt
+
+
+//q9 
+
+to create a folder 
+user@navatha-a:~$ mkdir s1
+
+
+
+//q10 user@navatha-a:~$ pwd
+/home/user
+
+
+//q11
+ls web// written what it curret folder contains 
+ button.htm   f.htm    henry-be-ldKYy3QKcVw-unsplash.jpg   IMG-20230821-WA0011.jpg                js.htm      lab1.htm   ol.htm                               pracm.java   s.htm    sss3.htm   wt.htm
+ dl.htm       gg.htm  'IMG_20230821_200520(2).jpg'         istockphoto-1486585163-1024x1024.jpg   lab13.htm   mywish     pexels-mushtaq-hussain-9198596.jpg   reg.html     sp.ht,   ul.htm
+ 
+//q12user@navatha-a:~$ which -a cat
+/usr/bin/cat
+/bin/cat ---> this is the path where this command runs 
+cat is a command name 
+
+
+
+//q13     
+to get the reference page of online 
+ man cat cat is a command it will print its manual 
+ man python 
+ 
+//q14 
+Syntax: su [options] [username]
+• Example: Change user-id to ‘user1’ (if it exists)
+$ su user1
+
+//q15
+sudo for install 
+
+//q16 

@@ -1,0 +1,200 @@
+user@navatha-a:~$ cat >abc.txt
+welcome to rgukt basar 
+rgukt basar in village
+near by saraswathi temple 
+^^D         
+user@navatha-a:~$ grep "welcome" abc.txt
+welcome to rgukt basar 
+user@navatha-a:~$ grip -n 'in' abc.txt
+
+Command 'grip' not found, but can be installed with:
+
+sudo apt install grip
+
+user@navatha-a:~$ grep -n 'in' abc.txt
+2:rgukt basar in village
+user@navatha-a:~$ grep -c 'welcome' abc.txt
+1
+user@navatha-a:~$ grep -c 'rgukt' abc.txt
+2
+user@navatha-a:~$ grep -h  'rgukt' abc.txt
+welcome to rgukt basar 
+rgukt basar in village
+user@navatha-a:~$ grep -l  'rgukt' abc.txt
+abc.txt
+user@navatha-a:~$ grep -v  'rgukt' abc.txt
+near by saraswathi temple 
+D
+user@navatha-a:~$ grep -o  'rgukt' abc.txt
+rgukt
+rgukt
+user@navatha-a:~$ grep -e  'rgukt' abc.txt
+welcome to rgukt basar 
+rgukt basar in village
+user@navatha-a:~$ grep -e  'welcome' abc.txt
+welcome to rgukt basar 
+user@navatha-a:~$ grep -e  'welcome' -e 'rgukt'  abc.txt
+welcome to rgukt basar 
+rgukt basar in village
+user@navatha-a:~$ 
+
+//sed is used to insert delete and update 
+
+
+user@navatha-a:~$ cat >abc.txt
+welcome to rgukt basar 
+rgukt basar in village
+near by saraswathi temple 
+^^D         
+user@navatha-a:~$ grep "welcome" abc.txt
+welcome to rgukt basar 
+user@navatha-a:~$ grip -n 'in' abc.txt
+
+Command 'grip' not found, but can be installed with:
+
+sudo apt install grip
+
+user@navatha-a:~$ grep -n 'in' abc.txt
+2:rgukt basar in village
+user@navatha-a:~$ grep -c 'welcome' abc.txt
+1
+user@navatha-a:~$ grep -c 'rgukt' abc.txt
+2
+user@navatha-a:~$ grep -h  'rgukt' abc.txt
+welcome to rgukt basar 
+rgukt basar in village
+user@navatha-a:~$ grep -l  'rgukt' abc.txt
+abc.txt
+user@navatha-a:~$ grep -v  'rgukt' abc.txt
+near by saraswathi temple 
+D
+user@navatha-a:~$ grep -o  'rgukt' abc.txt
+rgukt
+rgukt
+user@navatha-a:~$ grep -e  'rgukt' abc.txt
+welcome to rgukt basar 
+rgukt basar in village
+user@navatha-a:~$ grep -e  'welcome' abc.txt
+welcome to rgukt basar 
+user@navatha-a:~$ grep -e  'welcome' -e 'rgukt'  abc.txt
+welcome to rgukt basar 
+rgukt basar in village
+user@navatha-a:~$ cat >month.txt
+August
+september
+November
+December
+July 
+March
+May
+June
+user@navatha-a:~$ sort -M month.txt
+March
+May
+June
+July 
+August
+september
+November
+December
+user@navatha-a:~$ cat file.txt
+cat: file.txt: No such file or directory
+user@navatha-a:~$ cat >file.txt
+hjahsjahd
+aamakdja
+cccc
+bhuio
+ert
+user@navatha-a:~$ sort file.txt
+aamakdja
+bhuio
+cccc
+ert
+hjahsjahd
+user@navatha-a:~$ cat >file1.txt
+23
+4
+1
+0
+7
+5
+45
+user@navatha-a:~$ sort -n file1.txt
+0
+1
+4
+5
+7
+23
+45
+user@navatha-a:~$ sort -r file1.txt
+7
+5
+45
+4
+23
+1
+0
+user@navatha-a:~$ sort -n  -r file1.txt
+45
+23
+7
+5
+4
+1
+0
+user@navatha-a:~$ sort  file.txt -o month.txt
+user@navatha-a:~$ cat >d.txt
+my name is navatha studying btech 2nd year learning uni commands so dont disturb me here something is fishy 
+user@navatha-a:~$ sed 's/uni/unix/'d.txt
+sed: -e expression #1, char 12: unknown option to `s'
+user@navatha-a:~$ sed 's/uni/unix/'d.txt
+sed: -e expression #1, char 12: unknown option to `s'
+user@navatha-a:~$ sed 's/navatha//'d.txt
+sed: -e expression #1, char 12: unknown option to `s'
+user@navatha-a:~$ sed 's/navatha/Navatha/' d.txt
+my name is Navatha studying btech 2nd year learning uni commands so dont disturb me here something is fishy 
+user@navatha-a:~$ set '2d' sed.txt
+user@navatha-a:~$ sed '2d' d.txt
+my name is navatha studying btech 2nd year learning uni commands so dont disturb me here something is fishy 
+user@navatha-a:~$ sed '/fishy/d' d.txt
+user@navatha-a:~$ cat >d.txt
+i am,md mwoeuqowiyerqtrqyui
+wekwqjeuwoiywfnjfhljdncreurc rugevhfb
+kkwenwuey cu2	teghwjgdhgd wqeiwoueoieuwgrvwbdm
+wdjkwhrjwrh eiwiueoi	euwio dwidw d alhdajsndsbdnbehqiheh wrwjhrjklqiw
+qwjhjewjhewjrhejrherjeh
+user@navatha-a:~$ sed '2d' d.txt
+i am,md mwoeuqowiyerqtrqyui
+kkwenwuey cu2	teghwjgdhgd wqeiwoueoieuwgrvwbdm
+wdjkwhrjwrh eiwiueoi	euwio dwidw d alhdajsndsbdnbehqiheh wrwjhrjklqiw
+qwjhjewjhewjrhejrherjeh
+user@navatha-a:~$ sed '$i' d.txt
+sed: -e expression #1, char 2: expected \ after `a', `c' or `i'
+user@navatha-a:~$ sed '$i' d.txt
+sed: -e expression #1, char 2: expected \ after `a', `c' or `i'
+user@navatha-a:~$ cat >awk.txt
+venky window id 3289    
+navatha macos id 1628
+sowmith linux id 4567
+amusha  dacos id 8901
+aish unix id 292839
+user@navatha-a:~$ awk '{print $2,$1}' awk.txt
+window venky
+macos navatha
+linux sowmith
+dacos amusha
+unix aish
+user@navatha-a:~$ free -m
+              total        used        free      shared  buff/cache   available
+Mem:           7728        2351        2900         665        2476        4414
+Swap:          2047           0        2047
+user@navatha-a:~$ awk'{print NR,$0}'awk.txt
+awk{print NR,$0}awk.txt: command not found
+user@navatha-a:~$ awk'{print NR,$window}'awk.txt
+awk{print NR,$window}awk.txt: command not found
+user@navatha-a:~$ awk'{print NR}' awk.txt
+awk{print NR}: command not found
+user@navatha-a:~$ 
+
+
